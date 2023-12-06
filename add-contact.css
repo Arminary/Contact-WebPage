@@ -1,0 +1,14 @@
+.rover {
+    display: flex;
+    align-items: center; /* Center items vertically */
+  }
+
+  .rover img {
+    width: 100px; /* Adjust the width as needed */
+    height: 100px; /* Adjust the height as needed */
+    border-radius: 50%; /* Make the image circular */
+  }
+
+  .rover p {
+    margin-left: 10px; /* Add some space between the image and text */
+  }

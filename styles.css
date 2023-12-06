@@ -2,9 +2,9 @@
 
 *{
     font-family: 'Roboto Condensed', sans-serif;
-    overflow: hidden;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 #top{
@@ -75,6 +75,10 @@
     background: #F9F9FB ;
 }
 
+.topT .fa-plus{
+    padding: 27px 0 0 20px;
+}
+
 .top1{
     margin-top: 26px;
     margin-left: 120px;
@@ -89,8 +93,22 @@
 
 form{
     padding: 10px 0 0 0;
-    
 }
+
+
+.add-icon {
+    display: inline-block;
+    color: inherit;
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
 
 .avatar {
     width: 30px;
@@ -102,11 +120,179 @@ form{
 
 .top2{
     margin-left:290px ;
-    margin-top: 10px;
 }
 
 .top2 .fa-gear,
 .top2 .fa-calendar{
-    padding-bottom: 8px;
+    padding-bottom: 20px;
     padding-right: 15px;
 }
+
+#pic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+}
+
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.collapsible {
+    background-color: inherit;
+    color: black;
+    cursor: pointer;
+    padding: 18px;
+    width: 50%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  .active, .collapsible:hover {
+    background-color: inherit;
+  }
+  
+  .content {
+    width: 45.5%;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background-color: #f1f1f1;
+  }
+
+  .rover{
+    display: flex;
+    align-items: center; 
+  }
+  .rover p {
+    margin-left: 10px; /* Add some space between the image and text */
+  }
+
+
+
+
+.custom-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 20px;
+    background-color: #F9F9FB;
+  }
+  
+  .custom-list li {
+    text-decoration: none;
+  }
+  
+  .custom-list .underline {
+    text-decoration: underline;
+    color: cadetblue;
+  }
+
+
+
+
+#arrangement{
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 10px;
+}
+
+
+.card-img-top{
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 100% !important;
+    padding: 10px !important;
+}
+.card{
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.card-body{
+  padding-right: 50px !important;
+  align-items: center;
+}
+  
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+/* Media query for small screens */
+@media only screen and (max-width: 600px) {
+    header {
+        padding: 5px;
+    }
+
+    #top-icon-box {
+        flex-direction: column;
+    }
+
+    .search-input {
+        width: 80%;
+    }
+
+    .top2 {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    .float-right-sm {
+      float: right;
+    }
+    .clearfix::after {
+        display: block;
+        clear: both;
+        content: "";
+      }
+  }
+  
+  @media (min-width: 769px) {
+    .float-right-lg {
+      float: right;
+    }
+    .clearfix::after {
+        display: block;
+        clear: both;
+        content: "";
+      }
+  }
+
+  @media screen and (max-width: 768px ) {
+    #arrangement{
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+    
+}
+  
